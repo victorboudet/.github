@@ -1,0 +1,44 @@
+name: General Task
+description: Create a task for maintenance, refactoring, or chores
+title: "[TASK] "
+labels: ["chore"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### 🛠️ Task / Maintenance
+        Use this form to track internal chores, technical debt, or general tasks.
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: A clear and concise description of the task that needs to be completed.
+      placeholder: "e.g., Update the README to include the new installation steps."
+    validations:
+      required: true
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Why is this needed?
+      description: Explain the motivation behind this task. Why does it need to be done now?
+      placeholder: "e.g., Refactoring this file will make it easier to add feature X later."
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance Criteria
+      description: What exactly needs to happen for this task to be considered "Done"? (Use checkboxes)
+      value: |
+        - [ ] 
+        - [ ] 
+    validations:
+      required: true
+  - type: input
+    id: references
+    attributes:
+      label: References
+      description: Add links to any relevant documentation, related issues, or pull requests.
+      placeholder: "Issue #123, https://..."
+    validations:
+      required: false
